@@ -1,13 +1,34 @@
+/* Skip link for keyboard accessibility */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 12px;
+  z-index: 9999;
+  background: var(--accent-primary);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: top 0.2s ease;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* App chrome */
 .app-layout {
   min-height: 100vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .app-header {
-  padding: 20px 30px;
+  padding: 18px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,6 +53,7 @@
   background: linear-gradient(90deg, #3b82f6, #8b5cf6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 1.8rem;
   margin: 0;
 }
@@ -39,27 +61,29 @@
 .logo-dot {
   width: 12px;
   height: 12px;
-  background: var(--accent-primary);
+  background: var(--accent-success);
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-success);
 }
 
 .subtitle {
   color: var(--text-secondary);
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
+/* Main grid */
 .app-main {
   display: grid;
-  grid-template-columns: 1fr 400px;
-  gap: 24px;
+  grid-template-columns: 1fr 420px;
+  gap: 20px;
   flex: 1;
 }
 
 .col-left {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .col-right {
@@ -67,16 +91,45 @@
   flex-direction: column;
 }
 
-.ml-2 {
-  margin-left: 8px;
+/* Footer */
+.app-footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  padding: 8px 0 4px;
+  border-top: 1px solid var(--border-glass);
 }
 
-@media (max-width: 1024px) {
+/* Utilities */
+.ml-2 { margin-left: 8px; }
+
+/* Badge utility (used in header) */
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.badge-low {
+  background: rgba(16,185,129,0.15);
+  color: #34d399;
+  border: 1px solid rgba(16,185,129,0.3);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
   .app-main {
     grid-template-columns: 1fr;
   }
-  
   .col-right {
     min-height: 600px;
   }
+}
+
+@media (max-width: 640px) {
+  .app-layout { padding: 12px; gap: 12px; }
+  .app-header { padding: 14px 16px; }
+  .logo-area h1 { font-size: 1.4rem; }
 }
