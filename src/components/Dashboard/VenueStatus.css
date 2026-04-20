@@ -1,0 +1,125 @@
+.venue-status-container {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+}
+
+.section-title::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: var(--accent-success);
+  border-radius: 50%;
+  margin-right: 12px;
+  box-shadow: 0 0 10px var(--accent-success);
+  animation: pulse-glow 2s infinite;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.status-category {
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.status-category:hover {
+  transform: translateY(-5px);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 12px;
+}
+
+.category-icon {
+  margin-right: 12px;
+  color: var(--accent-primary);
+}
+
+.category-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status-item {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.status-item:hover {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: var(--border-glass);
+}
+
+.item-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.item-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.badge-low {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+.badge-medium {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+.badge-high {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+.item-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.item-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

@@ -1,0 +1,74 @@
+.stadium-selector-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 8px 14px;
+  backdrop-filter: blur(8px);
+}
+
+.stadium-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.stadium-icon {
+  font-size: 1rem;
+}
+
+.stadium-select-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stadium-select {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  appearance: auto;
+}
+
+.stadium-select:hover {
+  border-color: var(--accent-primary);
+}
+
+.stadium-select:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+
+.stadium-select option {
+  background: #1a1e29;
+  color: var(--text-primary);
+}
+
+.stadium-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 3px 8px;
+  border-radius: 20px;
+  border: 1px solid;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .stadium-tag {
+    display: none;
+  }
+}
